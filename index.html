@@ -1,51 +1,21 @@
-<!DOCTYPE HTML>
-<html lang="ja-JP">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>canvasApp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="./enchant.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
-<body  onload="init()">
-	<canvas id="first" width="500" height="500"></canvas>
-<script type="text/javascript">
-var canvas = document.getElementById('first');
-var ctx    = canvas.getContext('2d');
-
-function init(){
-	button(400, 400, 50, 50);
-}
-
-
-function button(x, y, width, height){
-	ctx.rect(x, y, width, height);
-	ctx.stroke();
-	var toggle = true;
-	canvas.addEventListener('click', function(e){
-		var button = e.target.getBoundingClientRect();
-	        mouseX = e.clientX - button.left;
-	        console.log('mouseX is: %s',mouseX)
-		mouseY = e.clientY - button.top;
-		if(x < mouseX && mouseX < x + width){
-			if(y < mouseY && mouseY < y + height){
-				if(toggle){
-					draw();
-					toggle = false;
-				}else{
-					clear();
-					toggle = true;
-				}
-			}
-		}
-	}, false);
-}
-
-function clear(){
-	ctx.clearRect(0, 0, 500, 500);
-}
-function draw(){
-	ctx.rect(20, 20, 200, 200);
-	ctx.stroke();
-}
-
-</script>
+<body>
+xxx
 </body>
 </html>
+
